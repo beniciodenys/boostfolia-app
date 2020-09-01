@@ -1,8 +1,10 @@
 $main-color: #353535;
+$main-font-color: #3d3d3d;
 $special-color: #f4511e;
 $dark-theme-color: #171f23;
 
 $skills-bar__percent: #e84c3d;
+
 
 @mixin blog__btn-icon($bg-src) {
   content: "";
@@ -44,6 +46,14 @@ $skills-bar__percent: #e84c3d;
     padding-right: $p-r;
     padding-left: $p-l;
   }
+}
+
+@mixin font-settings($f-f:""sans-serif"", $f-sz:"14px", $t-tr:"none", $color:$main-font-color, $l-sp: normal){
+  font-family: $f-f;
+  font-size: $f-sz;
+  text-transform: $t-tr;
+  color: $color;
+  letter-spacing: $l-sp;
 }
 
 @keyframes fadeEffect {

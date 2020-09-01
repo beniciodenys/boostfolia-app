@@ -6,6 +6,9 @@
 .main-container {
   max-width: 3000px;
   margin: auto;
+  font-family: robotoThin;
+  font-size: 14px;
+  color: $main-font-color;
 }
 
 .row.gutters-1 {
@@ -20,7 +23,7 @@
   text-decoration: none;
 }
 
-/*  styles for HEADER  */
+/*  styles for HEADER section*/
 header {
   background-color: #f8f6f6;
   height: 20vh;
@@ -37,7 +40,6 @@ header {
 /*  styles for TAGLINE */
 .tagline {
   background-color: #353535;
-  color: #d6d5d5;
   height: 80vh;
   text-align: center;
   position: relative;
@@ -48,8 +50,19 @@ header {
   text-transform: uppercase;
 }
 
+.tagline__text{
+  font-family: bigNoodleTitling;
+  color: #d6d5d5;
+  h1{font-size: 72px; letter-spacing: 0.15em;}
+  h3{font-size: 36px; letter-spacing: 0.1em;}
+}
+ 
+
 .hint {
   text-transform: uppercase;
+  font-family: robotoBold;
+  color: #fff;
+  font-size: 12px;
   position: absolute;
   bottom: 45px;
   left: 50%;
@@ -75,6 +88,8 @@ header {
     color: #f6f6f6;
     padding: 60px 0 65px;
     text-transform: uppercase;
+    font-family: robotoCondensed;
+    font-size: 36px;
     letter-spacing: 9px;
     &::after {
       position: absolute;
@@ -102,11 +117,15 @@ header {
     text-transform: uppercase;
     position: relative;
     margin-bottom: 30px;
+    font-family: bigNoodleTitling;
+    font-size: 48px;
+    letter-spacing: 0.1em;
+    color: $main-font-color;
     &::after {
       position: absolute;
       content: "";
       height: 2px;
-      bottom: -6px;
+      bottom: -1px;
 
       margin: 0 auto;
       left: 0;
@@ -126,6 +145,8 @@ header {
 
 .main-info__sub-title {
   margin-bottom: 0;
+  font-family: robotoThin;
+  font-size: 14px;
 }
 
 .cards {
@@ -147,6 +168,8 @@ header {
   &__title {
     font-size: 18px;
     text-transform: uppercase;
+    font-family: robotoBold;
+    color: #707070;
   }
   &__text {
     overflow: hidden;
@@ -154,13 +177,16 @@ header {
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
+    
+    text-align: center;
+    max-width: 245px;
   }
 }
 
 // styles for BEHIND SCENE section
 .behind-scene {
   padding: 0;
-  background-color: #353535;
+  background-color: $dark-theme-color;
   &__container {
     height: 100%;
   }
@@ -188,7 +214,10 @@ header {
 
   &__title {
     text-transform: uppercase;
+    font-family: robotoBold;
+    font-size: 30px;
   }
+  & p{color: #8f8e8e;}
 }
 
 .behind-scene__btn {
@@ -196,6 +225,8 @@ header {
   height: 37px;
   color: #fff;
   text-transform: uppercase;
+  font-family: robotoBold;
+  font-size: 14px;
   background-color: #e84c3d;
   border: none;
   border-bottom: 2px solid #b11000;
@@ -265,6 +296,12 @@ header {
   transform: scale(1.1);
 }
 
+.blog__info-time, .blog__btns a{
+  font-family: robotoCondensed;
+  font-size: 10px;
+  color: #787474;
+}
+
 .blog__btn-like::before {
   @include blog__btn-icon($bg-src: url(../img/card-icon-like.png));
 }
@@ -302,6 +339,12 @@ header {
   height: 60px;
 }
 
+.blog__card-title{
+  font-family: robotoLight;
+  font-size: 18px;
+  color: $main-font-color;
+}
+
 // styles for PRICING section
 .pricing {
   background-color: $dark-theme-color;
@@ -323,6 +366,13 @@ header {
   color: #fff;
   padding: 35px 0;
 }
+.pricing__card-title{
+  @include font-settings(robotoBold, 14px, uppercase, #fff, 0.1em);
+}
+.pricing__card-price{
+  @include font-settings(robotoLight, 36px,$color:#fff);
+}
+
 .pricing__card-body {
   background-color: #1f282c;
 }
@@ -332,6 +382,10 @@ header {
   &-item {
     padding: 0;
     margin: 0;
+    @include font-settings(robotoThin, 14px, $color:#fff)
+  }
+  &-number{
+    @include font-settings(robotoBold, 14px, $color:#fff);
   }
   &-number--active {
     color: $special-color;
@@ -340,7 +394,7 @@ header {
 
 .pricing__btn {
   background-color: #f6744b;
-  color: #fff;
+  @include font-settings(robotoBold, 14px, uppercase, #fff, .1em);
   border: none;
   width: 125px;
   height: 34px;
@@ -365,8 +419,14 @@ header {
   background: none;
   margin: 0 0 35px 0;
   text-transform: uppercase;
+  color: $main-font-color;
+  font-family: robotoLight;
+  font-size: 13.68px;
   position: relative;
   outline: none;
+  &--active{
+    font-family: robotoBold;
+  }
   &--active::after {
     position: absolute;
     content: "";
@@ -510,12 +570,18 @@ header {
 
 .team__member-name {
   padding: 0;
-  margin: 0;
+  margin: 0 0 8px;
   line-height: 10px;
   text-transform: uppercase;
+  font-family: robotoBold;
+  font-size: 20px;
+  letter-spacing: .1em;
+  color: $main-font-color;
 }
 .team__member-position {
   text-transform: uppercase;
+  font-family: robotoLight;
+  letter-spacing: .05em;
 }
 
 /* Slick Dots */
@@ -568,6 +634,12 @@ header {
 }
 
 //skills-info
+.team__skills-title{
+  text-transform: uppercase;
+  font-family: robotoBoldCondensed;
+  font-size: 24px;
+  letter-spacing: .05em;
+}
 .team__skills-info {
 }
 
@@ -578,6 +650,10 @@ header {
 }
 
 .team__skills-name {
+  text-transform: uppercase;
+  font-family: robotoBold;
+  font-size: 14px;
+  letter-spacing: .15em;
 }
 
 .team__skills-row {
@@ -600,6 +676,8 @@ header {
 
 .team__skills-percent-view {
   display: inline-block;
+  font-family: robotoLight;
+  font-size: 14px;
 }
 
 //  styles for FEATURES section
@@ -639,7 +717,7 @@ header {
 
 .features__cards {
   padding: 0 0 49px;
-
+  font-family: robotoLight;
   &-text {
     font-size: 18px;
     padding: 30px 0 0px;
@@ -656,9 +734,7 @@ header {
   display: flex;
   justify-content: center;
   &__title {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 24px;
+    @include font-settings(robotoBoldCondensed, 24px, uppercase, #fff, 0.1em);
     margin: 0 auto;
     padding: 34px 0;
     cursor: pointer;
@@ -681,9 +757,7 @@ header {
     margin: 0 0 45px;
   }
   &__title {
-    color: #696969;
-    text-transform: uppercase;
-    font-size: 14px;
+    @include font-settings(robotoBold, 14px, uppercase, #696969, 0.1em);
   }
   &__title::after {
     content: " *";
@@ -691,20 +765,21 @@ header {
   }
   &__input {
     width: 100%;
+    margin: 20px 0 0;
     border: none;
     border-bottom: 1px solid #cacaca;
   }
+  &__input--wide{
+    margin: 60px 0 0 ;
+  }
 }
 .contact-form__submit {
-  text-transform: uppercase;
+  @include font-settings(robotoBold, 14px, uppercase, #fff, .05em);
   border: none;
   outline: none !important;
-  background-color: $special-color;
-  color: #fff;
-  // padding: 0 43px; //20px 43px
+  background-color: #f6744b; // I recommend $special-color
   width: 203px;
   height: 51px;
-  font-size: 14px;
   transition: all 0.3 ease;
   position: relative;
   & span {
@@ -783,6 +858,12 @@ header {
   }
   & nav img {
     cursor: pointer;
+  }
+  &__title{
+    @include font-settings(bigNoodleTitling, 24px, uppercase, #fff, 0.1em);
+  }
+  &__sub-title{
+    @include font-settings(robotoCondensed, 14px, uppercase, #fff, 0.1em);
   }
 }
 
