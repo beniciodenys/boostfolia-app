@@ -74,10 +74,10 @@ gulp.task('export', function(){
         .pipe(gulp.dest('dist'))
 
         let buildCss = gulp.src('app/**/*.css')
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/'))    //'dist/css'
 
         let buildJs = gulp.src('app/**/*.js')
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist/'))     //'dist/js'
 
         let buildFonts = gulp.src('app/fonts/**/*.*')
         .pipe(gulp.dest('dist/fonts'))

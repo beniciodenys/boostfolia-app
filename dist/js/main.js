@@ -21,9 +21,6 @@ $(function () {
 
   $(".regular").slick({
     dots: false,
-    // infinite: true,
-    // slidesToShow: 3,
-    // slidesToScroll: 3
     fade: true,
   });
   $(".clients__slider").slick({
@@ -48,8 +45,6 @@ $(function () {
         },
       },
     ],
-    // prevArrow: <img class="slick-prev" src="img/clients__left-arrow.png" alt=""></img>,
-    // nextArrow: <img class="slick-next" src="img/clients__right-arrow.png" alt=""></img>
   });
   $(".team__member-slider").slick({
     infinite: true,
@@ -57,12 +52,11 @@ $(function () {
     slidesToScroll: 1,
     asNavFor: ".team__skills-slider",
     adaptiveHeight: true,
-    // fade: true,
     arrows: false,
     dots: true,
     appendDots: $(".team__member-slider-dots"),
     customPaging: function (slider, i) {
-      return '<div><img src="../img/slide-dot.png" /><img src="../img/slide-dot-active.png" /></div>';
+      return '<div><img src="img/slide-dot.png" /><img src="img/slide-dot-active.png" /></div>';
     },
   });
 
