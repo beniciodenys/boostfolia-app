@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px){
+    // .portfolio__tabs-block-item:nth-child(-n + 3) {
+    //     display: none;
+    //   }
+    .clients__slider{
+        width: 70%;
+    }
+    .team__skills-info-item{
+        display: block;
+    }
+}
+@media screen and (max-width: 500px){
+    .portfolio__tabs-block-item {
+        margin: 0px -4px 2px;
+    }
+}

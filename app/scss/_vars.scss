@@ -1,0 +1,52 @@
+$main-color: #353535;
+$special-color: #f4511e;
+$dark-theme-color: #171f23;
+
+$skills-bar__percent: #e84c3d;
+
+@mixin blog__btn-icon($bg-src) {
+  content: "";
+  display: inline-block; //  ???
+  width: 13px;
+  height: 13px;
+  background: $bg-src no-repeat center center;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+@mixin blog__hover-buttons-item($bg-color, $display) {
+  margin: 0 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: $bg-color;
+  display: $display;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+}
+
+@mixin blog__hover-buttons-icon($icon-src) {
+  width: 20px;
+  height: 20px;
+  background: $icon-src no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@mixin gutters($p-r, $p-l) {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: $p-r;
+    padding-left: $p-l;
+  }
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
