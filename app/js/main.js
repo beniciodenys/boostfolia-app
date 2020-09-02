@@ -96,7 +96,7 @@ $(function () {
     dots: true,
     appendDots: $(".team__member-slider-dots"),
     customPaging: function (slider, i) {
-      return '<div><img src="../img/slide-dot.png" /><img src="../img/slide-dot-active.png" /></div>';
+      return '<div><img src="img/slide-dot.png" /><img src="img/slide-dot-active.png" /></div>';
     },
   });
 
