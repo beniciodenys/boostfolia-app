@@ -19,7 +19,6 @@
 }
 
 .card a {
-  // color: #000;
   text-decoration: none;
 }
 
@@ -68,7 +67,7 @@ header {
   left: 50%;
   transform: translate(-50%, 0%);
   p {
-    margin-bottom: 0;
+    margin: 20px 0 0; 
   }
 }
 
@@ -232,6 +231,7 @@ header {
   border-bottom: 2px solid #b11000;
   transition: all 0.3s ease;
   cursor: pointer;
+  &:focus{ outline: none; border: none; border-bottom: 5px solid #b11000;}
   &:hover {
     border-bottom: 5px solid #b11000;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(#d3291a, 0.7);
@@ -472,9 +472,6 @@ header {
   margin: 0 0 10px;
   cursor: pointer;
   position: relative;
-}
-.portfolio__tabs-block-item:nth-child(n+3){
-  display: none;
 }
 .portfolio__tabs-block-item--shadowed {
   transition: all 0.5 ease;
