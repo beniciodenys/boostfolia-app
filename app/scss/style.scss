@@ -36,7 +36,7 @@ header {
   cursor: pointer;
 }
 
-/*  styles for TAGLINE */
+/*  styles for TAGLINE section*/
 .tagline {
   background-color: #353535;
   height: 80vh;
@@ -49,13 +49,18 @@ header {
   text-transform: uppercase;
 }
 
-.tagline__text{
+.tagline__text {
   font-family: bigNoodleTitling;
   color: #d6d5d5;
-  h1{font-size: 72px; letter-spacing: 0.15em;}
-  h3{font-size: 36px; letter-spacing: 0.1em;}
+  h1 {
+    font-size: 72px;
+    letter-spacing: 0.15em;
+  }
+  h3 {
+    font-size: 36px;
+    letter-spacing: 0.1em;
+  }
 }
- 
 
 .hint {
   text-transform: uppercase;
@@ -67,7 +72,7 @@ header {
   left: 50%;
   transform: translate(-50%, 0%);
   p {
-    margin: 20px 0 0; 
+    margin: 20px 0 0;
   }
 }
 
@@ -176,7 +181,7 @@ header {
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
-    
+
     text-align: center;
     max-width: 245px;
   }
@@ -216,7 +221,9 @@ header {
     font-family: robotoBold;
     font-size: 30px;
   }
-  & p{color: #8f8e8e;}
+  & p {
+    color: #8f8e8e;
+  }
 }
 
 .behind-scene__btn {
@@ -231,7 +238,11 @@ header {
   border-bottom: 2px solid #b11000;
   transition: all 0.3s ease;
   cursor: pointer;
-  &:focus{ outline: none; border: none; border-bottom: 5px solid #b11000;}
+  &:focus {
+    outline: none;
+    border: none;
+    border-bottom: 5px solid #b11000;
+  }
   &:hover {
     border-bottom: 5px solid #b11000;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(#d3291a, 0.7);
@@ -272,6 +283,7 @@ header {
 // styles for blog section
 .blog__cards {
   margin: 75px 0 85px;
+  overflow: hidden;
   & a {
     color: #000;
   }
@@ -296,7 +308,8 @@ header {
   transform: scale(1.1);
 }
 
-.blog__info-time, .blog__btns a{
+.blog__info-time,
+.blog__btns a {
   font-family: robotoCondensed;
   font-size: 10px;
   color: #787474;
@@ -339,7 +352,7 @@ header {
   height: 60px;
 }
 
-.blog__card-title{
+.blog__card-title {
   font-family: robotoLight;
   font-size: 18px;
   color: $main-font-color;
@@ -366,11 +379,11 @@ header {
   color: #fff;
   padding: 35px 0;
 }
-.pricing__card-title{
+.pricing__card-title {
   @include font-settings(robotoBold, 14px, uppercase, #fff, 0.1em);
 }
-.pricing__card-price{
-  @include font-settings(robotoLight, 36px,$color:#fff);
+.pricing__card-price {
+  @include font-settings(robotoLight, 36px, $color: #fff);
 }
 
 .pricing__card-body {
@@ -382,10 +395,10 @@ header {
   &-item {
     padding: 0;
     margin: 0;
-    @include font-settings(robotoThin, 14px, $color:#fff)
+    @include font-settings(robotoThin, 14px, $color: #fff);
   }
-  &-number{
-    @include font-settings(robotoBold, 14px, $color:#fff);
+  &-number {
+    @include font-settings(robotoBold, 14px, $color: #fff);
   }
   &-number--active {
     color: $special-color;
@@ -394,7 +407,7 @@ header {
 
 .pricing__btn {
   background-color: #f6744b;
-  @include font-settings(robotoBold, 14px, uppercase, #fff, .1em);
+  @include font-settings(robotoBold, 14px, uppercase, #fff, 0.1em);
   border: none;
   width: 125px;
   height: 34px;
@@ -405,10 +418,10 @@ header {
 }
 
 //  styles for PORTFOLIO section
-.portfolio .container-fluid{
+.portfolio .container-fluid {
   padding: 0;
 }
-.portfolio__tabs-items{
+.portfolio__tabs-items {
   margin: 90px 0 0;
   text-align: center;
   // display: flex;
@@ -424,7 +437,7 @@ header {
   font-size: 13.68px;
   position: relative;
   outline: none;
-  &--active{
+  &--active {
     font-family: robotoBold;
   }
   &--active::after {
@@ -438,7 +451,8 @@ header {
     width: 85%;
     background: #f4511e;
   }
-  &:active, &:focus {
+  &:active,
+  &:focus {
     outline-style: none;
     -moz-outline-style: none;
     border: none;
@@ -454,16 +468,16 @@ header {
   }
 }
 
-.portfolio__tabs-block{
+.portfolio__tabs-block {
   display: none;
-  &--active{
+  &--active {
     display: block;
     animation: fadeEffect 1s;
   }
-  &--hidden{
+  &--hidden {
     display: none !important;
   }
-  &--defaultOpen{
+  &--defaultOpen {
     display: block !important;
   }
 }
@@ -508,7 +522,7 @@ header {
   height: 27px;
   cursor: pointer;
   transition: all 300ms ease;
-  &:hover{
+  &:hover {
     filter: brightness(10);
   }
 }
@@ -517,8 +531,10 @@ header {
   margin: 100px auto 80px;
 }
 .clients__slider-item {
-  max-height: 50px;
-  // max-width: 100px;
+  // max-height: 50px;
+  // // max-width: 100px;
+  width: 100px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -572,30 +588,22 @@ header {
   text-transform: uppercase;
   font-family: robotoBold;
   font-size: 20px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: $main-font-color;
 }
 .team__member-position {
   text-transform: uppercase;
   font-family: robotoLight;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 /* Slick Dots */
 
 .team__member-slider-dots .slick-dots {
-  // position: absolute;
-  // right: 0;
-  // top: 50%;
-  // transform: translateY(-50%);
   list-style: none;
-  // text-align: center;
   margin: 0;
   padding: 0 0 80px;
-  // border-left: 3px solid lightgrey;
-  // height: 100%;
   display: flex;
-  // flex-direction: column;
   justify-content: center;
 }
 
@@ -631,13 +639,11 @@ header {
 }
 
 //skills-info
-.team__skills-title{
+.team__skills-title {
   text-transform: uppercase;
   font-family: robotoBoldCondensed;
   font-size: 24px;
-  letter-spacing: .05em;
-}
-.team__skills-info {
+  letter-spacing: 0.05em;
 }
 
 .team__skills-info-item {
@@ -650,7 +656,7 @@ header {
   text-transform: uppercase;
   font-family: robotoBold;
   font-size: 14px;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 .team__skills-row {
@@ -682,10 +688,6 @@ header {
   background-color: $dark-theme-color;
   color: #fff;
   text-align: center;
-  // &__title {
-  //   padding: 60px 0 65px;
-  //   text-transform: uppercase;
-  // }
 }
 
 .features__title {
@@ -766,12 +768,12 @@ header {
     border: none;
     border-bottom: 1px solid #cacaca;
   }
-  &__input--wide{
-    margin: 60px 0 0 ;
+  &__input--wide {
+    margin: 60px 0 0;
   }
 }
 .contact-form__submit {
-  @include font-settings(robotoBold, 14px, uppercase, #fff, .05em);
+  @include font-settings(robotoBold, 14px, uppercase, #fff, 0.05em);
   border: none;
   outline: none !important;
   background-color: #f6744b; // I recommend $special-color
@@ -856,11 +858,23 @@ header {
   & nav img {
     cursor: pointer;
   }
-  &__title{
+  &__title {
     @include font-settings(bigNoodleTitling, 24px, uppercase, #fff, 0.1em);
   }
-  &__sub-title{
+  &__sub-title {
     @include font-settings(robotoCondensed, 14px, uppercase, #fff, 0.1em);
+  }
+}
+
+//  AOS animation
+[data-aos="tilt-in-fwd-tr"] {
+  transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px)
+    skew(-35deg, 10deg);
+  opacity: 0;
+
+  &.aos-animate {
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
   }
 }
 
